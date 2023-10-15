@@ -27,13 +27,27 @@ btn.addEventListener('click', function(){
         userNumberList.push(rndNumber);
     
     }
+
+    const resultArray = [];
     
-    result.innerHTML = userNumberList.slice(userNumberList.length - 5, userNumberList.length);
+    for(let b = 0; b < 6; b++){
+        
+        resultArray.push(userNumberList[(userNumberList.length - b)]);
+        result.innerHTML = resultArray;
+
+    }
 
 })
 
 btn2.addEventListener('click', function(){
     
-    result2.innerHTML = userNumberList.slice((userNumberList.length - input2.value), userNumberList.length);
+    const resultArray2 = [];
+    
+    for(let c = 0; c < parseInt(input2.value); c++){
+        
+        resultArray2.push(userNumberList[c]);
+        result2.innerHTML = resultArray2;
+
+    }
 
 })
